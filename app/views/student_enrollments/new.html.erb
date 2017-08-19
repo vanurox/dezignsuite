@@ -1,0 +1,114 @@
+<section>
+      <div class="container-fluid enrollment_con">
+        <div class="container">
+          <div class="row">
+            <div class="page_heading enrollment_heading">ENROLLMENT</div>
+          </div>
+          <div class="row align_justify">
+            <div class="col-lg-3 col-md-3 col-sm-3"></div>
+            <div class="col-lg-6 col-md-6 col-sm-6" style="background:#e9e9e9">
+              <h1>Online Enrollment Form</h1><hr>
+              <%= form_tag controller:"student_enrollments",action:"create" do %>
+                <div class="form-group">
+                  <label for="enrollment_name">Name*</label>
+                  <input name="name" id="enrollment_name" type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_email">Email*</label>
+                  <input name="email" id="enrollment_email" type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_mobile">Mobile*</label>
+                  <input name="mobile" id="enrollment_mobile" type="number" class="form-control" placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_yearsem">Year/Semester*</label>
+                  <input name="year" id="enrollment_yearsem" type="text" class="form-control" placeholder="Write Year or Semester">
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_coursework">Courses/Workshop*</label>
+                  <select name="course" id="enrollment_coursework" type="text" class="form-control">
+                    <option>Choose your course name</option>
+                    <option>Android</option>
+                    <option>ASP .NET</option>
+                    <option>PHP</option>
+                    <option>Web Designing</option>
+                    <option>College / University workshop</option>
+                    <option>School Workshop</option>
+                    <option>Corporate Wrorkshop</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_state">State*</label>
+                  <select name="state" id="enrollment_state" type="text" class="form-control">
+                    <option>Choose your state</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Orissa">Orissa</option>
+                    <option value="Pondicherry">Pondicherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttaranchal">Uttaranchal</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_postalcode">Postal Code*</label>
+                  <input name="postalcode" id="enrollment_postalcode" type="number" class="form-control" placeholder="Your postal code">
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_centre">Preferred Centre*</label>
+                  <select name="centre" id="enrollment_centre" type="text" class="form-control">
+                    <option>Choose your centre</option>
+                    <option>Mohali</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_college">College name*</label>
+                  <textarea name="college" id="enrollment_college" class="form-control" placeholder=""></textarea> 
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_referbyname enrollment_referbycollege enrollment_referbyphone">Refered by</label>
+                  <input name="referbyname" id="enrollment_referbyname" type="text" class="form-control" placeholder="Name">
+                  <input name="referbycollege" id="enrollment_referbycollege" type="text" class="form-control" placeholder="College">
+                  <input name="referbyphone" id="enrollment_referbyphone" type="number" class="form-control" placeholder="Number">
+                </div>
+                <div class="form-group">
+                  <label for="enrollment_amount">Amount (in Rs.)*</label>
+                  <input name="amount" id="enrollment_amount" type="number" class="form-control" placeholder="Amount">
+                </div>
+                <input type="submit" value="Submit" class="winter_btn backorange" />  
+              <% end %>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>

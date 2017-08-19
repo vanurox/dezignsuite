@@ -1,0 +1,20 @@
+<div class="header">
+	<div class="navbar">
+		<div class=" col-md-3">
+			<div class="left-nav">
+				Dezign Suite
+			</div>
+		</div>
+		<div class="col-md-9">
+			<ul class="right-nav">
+				<!-- <li class="setting">
+					<span><%= fa_icon "gear" %></span>
+				</li> -->
+				<li><%= link_to (fa_icon 'sign-out'), destroy_user_session_path, :method=>'delete' %></li>
+				<li class="notification">
+					<span><%= fa_icon "bell-o" %></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

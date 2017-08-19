@@ -1,0 +1,35 @@
+.sidebar{
+	width:200px;
+	background:#000;
+	height:100%;
+	color:#bbb;
+	top: 5rem;
+	left:0;
+	position:fixed;
+	ul{
+		list-style: none;
+		padding:0;
+		li:first-child{
+			margin:0px;
+		}
+		li{
+			margin:5px 0px;
+			cursor: pointer;
+		}
+		li a{
+			width: 100%;
+			display:block;
+			text-decoration: none;
+			color: #bbb;
+			padding:10px 15px;
+		}
+		li a:hover{
+			background: #bbb;
+			color: #000;
+		}
+		li a.active{
+			background: #bbb;
+			color: #000;
+		}
+	}
+}

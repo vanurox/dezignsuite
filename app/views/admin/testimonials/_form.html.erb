@@ -1,0 +1,12 @@
+<%= form_for [:admin, @testimonial] do |f| %>
+  <div class="form-group">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, placefolder: "Image", class: "form-control", required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, placefolder: "Body", class: "form-control", required: true %>
+  </div>
+  <%= f.button (fa_icon "check", text:"Save").html_safe, class: "btn btn-success",data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving...".html_safe} %>
+  <%= link_to (fa_icon "arrow-left", text:"Back").html_safe, admin_testimonials_path, class: "btn btn-primary" %>
+<% end %>

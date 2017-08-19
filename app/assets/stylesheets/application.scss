@@ -1,0 +1,119 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import "font-awesome";
+@import "nano.scss";
+@import 'header.scss';
+@import 'footer.scss';
+@import 'admin/header.scss';
+@import 'admin/sidebar.scss';
+@import 'home.scss';
+@import 'responsive.scss';
+
+/* common style*/
+.page-wrapper{
+	margin-top: 5rem;
+}
+.center{
+	text-align: center;
+}
+.model_buttons{
+	margin: 20px 10px 10px 0;
+	text-align: right;
+}
+.model_line{
+	border-top: 2px solid #ddd;
+}
+.margin-t{
+	margin-top: 10px;
+}
+.fontsize_small{
+	font-size: 16px;
+}
+.align_center{
+	text-align: center;
+}
+.bold_text{
+	font-weight: 900;
+	font-family: 'Open Sans', sans-serif;
+}
+.align_right{
+	text-align: right;
+}
+.align_left{
+	text-align: left;
+}
+.paddingtop{
+	padding-top: 20px;
+}
+.paddingbottom{
+	padding-bottom: 20px;
+}
+.margintop{
+	margin-top: 20px;
+}
+.marginleft{
+	margin-left: 20px
+}
+.marginright{
+	margin-right: 20px;
+}
+.fontblue{
+	color: #0047a3;
+}
+.fontorange{
+	color:#ef5a13;
+}
+.backblue{
+	background: #0047a3;
+}
+.backorange{
+	background:#ef5a13;
+}
+.fontwhite{
+	color: #fff;
+}
+.page_heading{
+	width: 250px;
+	height: 60px;
+	background: #ef5a13;
+	color: #fff;
+	font-weight: 900;
+	text-align: center;
+	font-size: 24px;
+	margin: auto;
+	padding-top: 10px;
+}
+.winter_btn{
+	outline: none;
+	border-radius: 20px;
+	height: 40px;
+	width: 140px;
+	border: none;
+	color: #fff;
+	transition:.3s ease-in-out;
+}
+.winter_btn:hover{
+	background: #0047a3;
+}
+.fixed-header {
+  position: fixed;
+  top:0; left:0;
+  width: 100%; 
+  z-index: 1000;
+  background: #fff;
+}

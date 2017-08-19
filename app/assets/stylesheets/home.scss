@@ -1,0 +1,114 @@
+
+/*section*/
+/*cards*/
+.cards_con{
+	background-image: url("<%= asset_apth('graphic2.jpg') %>");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0px;
+}
+.cards_wrap{
+	width:250px;
+	height: 350px;
+	background:rgba(255,255,255,.8);
+	margin: auto;
+	text-align: center;
+	transition:.3s ease-in-out;
+}
+.cards_wrap:hover{
+	transform:scale(.9);
+}
+.cards_head{
+	width:250px;
+	padding: 15px 0px;
+	text-align: center;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
+	background:#ef5a13;
+}
+.cards_wrap img{
+	width: 100px;	
+}
+.cards_wrap p{
+	margin: 0px 10px;	
+}
+/*cards*/
+/*gallery*/
+
+.gallery_wrap{
+	margin-top: 50px;
+}
+/*gallery*/
+/*testimonial*/
+.testimonial_banner{
+	width: 100%;
+	margin-top:50px; 
+
+}
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------*/
+/*    Carousel Fade Transition   */
+/*-------------------------------*/
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #ef5a13;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
+    border:solid 10px #ef5a13;
+}
+.testimonial_pic{
+	width: 100%;
+}
+/*testimonial*/
+/*contact*/
+.contact_con{
+	background: url("<%= asset_path('graphic4.jpg') %>");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.home_contact_form{
+	margin-top: 20px;
+	background: rgba(255,255,255,.1);
+	color: #fff;
+	font-size: 18px;
+	padding: 20px;
+	outline: none;
+}
+.home_contact_form:active, .home_contact_form:focus{
+	border:solid 4px #ef5a13;
+}

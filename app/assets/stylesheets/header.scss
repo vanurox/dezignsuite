@@ -1,0 +1,76 @@
+/*top header*/
+.top_logo{
+	width:300px;
+}
+
+.header_right a{
+	text-decoration: none;
+	color: #0047a3;
+}
+.nav_con{
+	border-top:solid 4px #0047a3;
+	margin-top: 20px;
+}
+.navbar-nav li:hover > a{
+	color: #ef5a13;
+	font-weight: 900;
+}
+.header_con{
+	transition:.3s ease-in-out;
+}
+/*top header*/
+
+/*header slider*/
+.slider_con{
+	border-top:solid 4px #0047a3;
+}
+.header_slider_col{
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+	
+}
+.slider_left_col{
+	width:70%;
+}
+
+.slider_right-top{
+	height: 50%;
+	width: 30%;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	background: #ef5a13;
+	text-align: center;
+}
+.slider_right-bottom{
+	height: 50%;
+	background: #0047a3;
+	position: absolute;
+	width: 30%;
+	bottom: 0;
+	right: 15px;
+	overflow: hidden;
+}
+.tcs_logo{
+	height: 70%;
+	margin-top: 5%;
+}
+.slider_graphic{
+	width: 100%
+}
+.newsline{
+	background: #000;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px 0px;
+}
+.navbar-toggle .icon-bar {
+    background: #ef5a13;
+}
+.navbar-toggle {
+    border:solid 2px #ef5a13;
+}
+
+
+/*header slider*/
