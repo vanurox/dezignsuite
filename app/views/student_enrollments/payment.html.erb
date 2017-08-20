@@ -1,0 +1,7 @@
+<h2 class="text-success">Payment Successfull</h2>
+<p>Name: <%= @response.buyer_name %></p>
+<p>Email: <%= @response.email %></p>
+<p>Amount: <%= @response.amount %></p>
+<p>Fees: <%= @fees %></p>
+<p>Total Amount: <%= @response.amount.to_f + @fees %></p>
+<p><%= link_to "Go to home", root_path, class: "btn btn-primary" %></p>

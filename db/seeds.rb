@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(email: "admin@example.com", password: "admin@123")
+courses = ["Android","PHP","Web Designing","ASP .NET","College/University workshop","School Workshop","Corporate Workshop"]
+courses.each do |course|
+	Course.create!(name: course)
+end

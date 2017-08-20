@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   	root "dashboard#index"
   	resources :testimonials
   	resources :galleries
+    resources :workshops, only: [:index]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "pages#home"
@@ -11,5 +12,14 @@ Rails.application.routes.draw do
   get "/contact", to: "pages#contact"
   get "/blog", to: "pages#blog"
   get "/career",to: "pages#career"
-  resources :student_enrollments, only: [:new,:create]
+  resources :workshops, only: [:create]
+  get "/workshop", to: "workshops#workshop"
+  get "/college_workshop", to: "workshops#college_workshop"
+  get "/school_workshop", to: "workshops#school_workshop"
+  get "/corporate_workshop", to: "workshops#corporate_workshop"
+  resources :student_enrollments, only: [:new,:create] do
+  	member do
+  		get "payment"
+  	end
+  end
 end

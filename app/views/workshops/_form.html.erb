@@ -1,0 +1,39 @@
+<%= form_for @workshop do |f| %>
+                <div class="form-group">
+                  <label for="workshop_name">Name*</label>
+                  <%= f.text_field :name, class: "form-control", placeholder:"Name" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_email">Email*</label>
+                  <%= f.text_field :email, class: "form-control", placeholder:"Email" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_mobile">Mobile*</label>
+                  <%= f.text_field :mobile, class: "form-control", placeholder:"Mobile" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_workshoptype">Workshop Type</label>
+                  <%= f.select :workshop_type, options_for_select([["Technical",'Technical'],["Non-technical","Non-technical"]]),{prompt: "Choose your workshop"},class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_location">Location</label>
+                  <%= f.select :location, options_for_select([["Mohali",'Mohali']]),{prompt: "Choose your location"},class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_state">State*</label>
+                  <%= f.text_field :state,placeholder: "Your state", class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_city">City*</label>
+                  <%= f.text_field :city, placeholder: "Your city", class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_subject">Subject*</label>
+                  <%= f.text_field :subject,placeholder: "Subject", class: "form-control" %>
+                </div>
+                <div class="form-group">
+                  <label for="workshop_message">Message*</label>
+                  <%= f.text_area :message, class: "form-control" %>
+                </div>
+                <%= f.submit "Submit", class: "winter_btn backorange" %>  
+              <% end %>

@@ -2,7 +2,7 @@
 /*section*/
 /*cards*/
 .cards_con{
-	background-image: url("<%= asset_apth('graphic2.jpg') %>");
+	background-image: url(asset_path('graphic2.jpg'));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -96,7 +96,7 @@
 /*testimonial*/
 /*contact*/
 .contact_con{
-	background: url("<%= asset_path('graphic4.jpg') %>");
+	background: url(asset_path('graphic4.jpg'));
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
