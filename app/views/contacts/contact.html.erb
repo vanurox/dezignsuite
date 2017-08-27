@@ -17,29 +17,29 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6" style="background:#e9e9e9">
               <h1>Reach Us</h1><hr>
-              <form>
+              <%= form_for @contact, html: {novalidate: ''} do |f|%>
                 <div class="form-group">
-                  <label for="contact_name">Name</label>
-                  <input id="contact_name" type="text" class="form-control" placeholder="Name">
+                  <label for="contact_name">Name*</label>
+                  <%= f.text_field :name, placeholder: "Name", class: "form-control",required: true %>
                 </div>
                 <div class="form-group">
-                  <label for="contact_email">Email</label>
-                  <input id="contact_email" type="email" class="form-control" placeholder="Email">
+                  <label for="contact_email">Email*</label>
+                  <%= f.email_field :email, placeholder: "Email", class: "form-control", required: true %>
                 </div>
                 <div class="form-group">
                   <label for="contact_phone">Phone</label>
-                  <input id="contact_phone" type="number" class="form-control" placeholder="Phone Number">
+                  <%= f.text_field :phone, placeholder: "Phone", class: "form-control", required: true %>
                 </div>
                 <div class="form-group">
                   <label for="contact_mobile">Mobile</label>
-                  <input id="contact_mobile" type="number" class="form-control" placeholder="Mobile Number">
+                  <%= f.text_field :mobile, placeholder: "Mobile", class: "form-control", required: true %>
                 </div>
                 <div class="form-group">
-                  <label for="contact_msg">Your Message</label>
-                  <textarea id="contact_msg" class="form-control" placeholder=""></textarea> 
+                  <label for="contact_msg">Your Message*</label>
+                  <%= f.text_area :message, class: "form-control" %> 
                 </div>
-                <input type="button" value="Submit" class="winter_btn backorange" />
-              </form>
+                <%= f.submit "Submit", class: "winter_btn backorange" %>
+              <% end %>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 class Admin::GalleriesController < ApplicationController
 	before_action :authenticate_user!
-	before_action :set_gallery, only: [:edit,:update,:destroy]
+	before_action :set_gallery, except: [:index,:new,:create]
 	def index
 		@galleries = Gallery.all
 	end
@@ -27,6 +27,16 @@ class Admin::GalleriesController < ApplicationController
 		else
 			render :edit
 		end
+	end
+
+	def publish
+		@gallery.update_attributes(status: true)
+		redirect_to admin_galleries_path
+	end
+
+	def unpublish
+		@gallery.update_attributes(status: false)
+		redirect_to admin_galleries_path
 	end
 
 	def destroy

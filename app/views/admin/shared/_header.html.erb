@@ -10,7 +10,7 @@
 				<!-- <li class="setting">
 					<span><%= fa_icon "gear" %></span>
 				</li> -->
-				<li><%= link_to (fa_icon 'sign-out'), destroy_user_session_path, :method=>'delete' %></li>
+				<li><%= link_to (fa_icon 'sign-out'), destroy_user_session_path, {:method=>'delete' , title: "Sign Out"}%></li>
 				<li class="notification">
 					<span><%= fa_icon "bell-o" %></span>
 				</li>

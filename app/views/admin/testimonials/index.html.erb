@@ -26,6 +26,9 @@
           <% @testimonials.each do |testimonial| %>
             <tr>
               <td>
+                <%= testimonial.name %>
+              </td>
+              <td>
                 <%= image_tag testimonial.avatar, size:"50x50" %>
               </td>
               <td>

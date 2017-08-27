@@ -1,5 +1,9 @@
 <%= form_for [:admin, @testimonial] do |f| %>
   <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, placefolder: "Name", class: "form-control", required: true %>
+  </div>
+  <div class="form-group">
     <%= f.label :avatar %>
     <%= f.file_field :avatar, placefolder: "Image", class: "form-control", required: true %>
   </div>

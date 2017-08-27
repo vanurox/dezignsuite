@@ -3,4 +3,14 @@ class Admin::WorkshopsController < ApplicationController
 	def index
 		@workshops = Workshop.all
 	end
+
+	def show
+		@workshop = Workshop.find(params[:id])
+	end
+
+	def destroy
+		@workshop = Workshop.find(params[:id])
+		@workshop.destroy
+		redirect_to admin_workshops_path
+	end
 end

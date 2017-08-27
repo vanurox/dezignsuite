@@ -5,7 +5,7 @@
   </div>
   <div class="form-group">
     <%= f.label :show_at %>
-    <%= f.select :show_at, options_for_select([['Silder','silder'],['Card','card'],['Gallery','gallery']], selected: @gallery.show_at), {prompt: "Select Position"},{class: "form-control", required: true} %>
+    <%= f.select :show_at, options_for_select([['Slider','slider'],['Gallery','gallery']], selected: @gallery.show_at), {prompt: "Select Position"},{class: "form-control", required: true} %>
   </div>
   <%= f.button (fa_icon "check", text:"Save").html_safe, class: "btn btn-success",data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving...".html_safe} %>
   <%= link_to (fa_icon "arrow-left", text:"Back").html_safe, admin_galleries_path, class: "btn btn-primary" %>

@@ -1,0 +1,71 @@
+<section>
+  <div class="container-fluid career_con">
+    <div class="container">
+      <div class="row">
+        <div class="page_heading career_heading">CAREER</div>
+      </div>
+      <div class="row align_justify">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h1>Open Positions</h1><hr>
+          <h4>
+            <p><b>Java trainer - Core Advance</b></p>
+            <p>Experience: min 2years</p>
+            <p>Location: Punjab , India</p>
+          </h4><hr>
+          <h4>
+            <p><b>Java trainer - Core Advance</b></p>
+            <p>Experience: min 2years</p>
+            <p>Location: Punjab , India</p>
+          </h4><hr>
+          <h4>
+            <p><b>Java trainer - Core Advance</b></p>
+            <p>Experience: min 2years</p>
+            <p>Location: Punjab , India</p>
+          </h4><hr>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6" style="background:#e9e9e9">
+          <h1>Apply</h1><hr>
+          <%= form_for @career, html: {novalidate: true} do |f| %>
+            <div class="form-group">
+              <label for="career_name">Name*</label>
+              <%= f.text_field :name, class: "form-control", placeholder:"Name" %>
+            </div>
+            <div class="form-group">
+              <label for="career_email">Email*</label>
+              <%= f.text_field :email, class: "form-control", placeholder:"Email" %>
+            </div>
+            <div class="form-group">
+              <label for="career_mobile">Mobile*</label>
+              <%= f.text_field :mobile, class: "form-control", placeholder:"Mobile" %>
+            </div>
+            <div class="form-group">
+              <label for="career_mobile">Phone</label>
+              <%= f.text_field :phone, class: "form-control", placeholder:"Phone" %>
+            </div>
+            <div class="form-group">
+              <label for="career_location">Location</label>
+              <%= f.select :location, options_for_select([["Mohali",'Mohali']]),{prompt: "Choose your location"},class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <label for="career_state">State*</label>
+              <%= f.text_field :state,placeholder: "Your state", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <label for="career_city">City*</label>
+              <%= f.text_field :city, placeholder: "Your city", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <label for="career_subject">Subject*</label>
+              <%= f.text_field :subject,placeholder: "Subject", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <label for="career_message">Message*</label>
+              <%= f.text_area :message, class: "form-control" %>
+            </div>
+            <%= f.submit "Submit", class: "winter_btn backorange" %>  
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

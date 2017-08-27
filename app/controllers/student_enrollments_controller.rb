@@ -6,6 +6,7 @@ class StudentEnrollmentsController < ApplicationController
 	end
 
 	def create
+		raise student_params.inspect
 		@student_enrollment = StudentEnrollment.new(student_params)
 		if @student_enrollment.save
 			@api = Instamojo::API.new("96530e29cca09e36297a8b49720b35c4", "ad08e5ea16029051bfce0c62d40ed2ef", "https://test.instamojo.com/api/1.1/")

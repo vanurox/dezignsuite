@@ -21,6 +21,7 @@
           <th>Workshop Type</th>
           <th>Location</th>
           <th>Subject</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -41,6 +42,10 @@
               </td>
               <td>
                 <%= workshop.subject %>
+              </td>
+              <td>
+                <%= link_to (fa_icon "eye").html_safe,admin_workshop_path(workshop.id),{title:'Show',class: 'btn-sm btn-primary'} %>
+                <%= link_to (fa_icon "trash").html_safe, admin_workshop_path(workshop),{title:'Delete',class: 'btn-sm btn-danger',method: :delete,data: {confirm: "Are you sure you want to delete this?"}} %>
               </td>
             </tr>
           <% end %>

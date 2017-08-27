@@ -21,10 +21,14 @@
 @import 'footer.scss';
 @import 'admin/header.scss';
 @import 'admin/sidebar.scss';
+@import 'admin/style.scss';
 @import 'home.scss';
 @import 'responsive.scss';
 
 /* common style*/
+a:hover{
+	text-decoration: none;
+}
 .page-wrapper{
 	margin-top: 5rem;
 }

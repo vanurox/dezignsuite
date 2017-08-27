@@ -13,17 +13,19 @@
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
-                <div class="item active">
-                  <%= image_tag asset_path("banner1.jpg"), alt:"Los Angeles" %>
-                </div>
+                <% @slides.each_with_index do |slide,index| %>
+                  <div class="item <%= if index==0 then 'active' end %>">
+                    <%= image_tag slide.file, alt:"#{slide.file.file.filename}" %>
+                  </div>
+                <% end %>
 
-                <div class="item">
+                <!-- <div class="item">
                   <%= image_tag asset_path("banner1.jpg"), alt:"Chicago" %>
                 </div>
 
                 <div class="item">
                   <%= image_tag asset_path("banner1.jpg"), alt:"New York" %>
-                </div>
+                </div> -->
               </div>
 
               <!-- Left and right controls -->
@@ -138,14 +140,9 @@
             }'>
             
             <!-- IMAGES -->
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
-            <a href="<%= asset_path('graphic1.jpg') %>" data-ngthumb="<%= asset_path('graphic1.jpg') %>">photo 1</a>
+            <% @galleries.each do |gallery| %>
+              <a href="<%= gallery.file %>" data-ngthumb="<%= gallery.file %>">photo 1</a>
+            <% end %>
           </div>
         </div>
       </div>
@@ -175,54 +172,17 @@
                     </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                      <div class="item">
-                                  <div class="profile-circle" style="background-color: rgba(0,0,0,.2);">
-                                    <%= image_tag asset_path("test1.png"), class: "testimonial_pic" %>
-                                  </div>
-                        <blockquote>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                        </blockquote> 
-                      </div>
-                      <div class="item">
-                                  <div class="profile-circle" style="background-color: rgba(77,5,51,.2);">
-                                    <%= image_tag asset_path("test1.png"), class: "testimonial_pic" %>
-                                  </div>
-                        <blockquote>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                        </blockquote>
-                      </div>
-                      <div class="active item">
-                                  <div class="profile-circle" style="background-color: rgba(145,169,216,.2);">
-                                    <%= image_tag asset_path("test1.png"), class: "testimonial_pic" %>
-                                  </div>
-                        <blockquote>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                        </blockquote>
-                      </div>
-                              <div class="item">
-                                  <div class="profile-circle" style="background-color: rgba(77,5,51,.2);">
-                                    <%= image_tag asset_path("test1.png"), class: "testimonial_pic" %>
-                                  </div>
+                      <% @testimonials.each_with_index do |testimonial, index| %>
+                        <div class="item <%= index == 0 ? 'active' : '' %>">
+                          <div class="profile-circle" style="background-color: rgba(0,0,0,.2);">
+                            <%= image_tag testimonial.avatar, class: "testimonial_pic" %>
+                          </div>
+                          <h3 class="align_center"><%= testimonial.name %></h3>
                           <blockquote>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                        </blockquote>
-                      </div>
-                              <div class="item">
-                                  <div class="profile-circle" style="background-color: rgba(77,5,51,.2);">
-                                    <%= image_tag asset_path("test1.png"), class: "testimonial_pic" %>
-                                  </div>
-                          <blockquote>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                        </blockquote>
-                      </div>
-                              <div class="item">
-                                  <div class="profile-circle" style="background-color: rgba(77,5,51,.2);">
-                                    <%= image_tag asset_path("test1.png"), class: "testimonial_pic" %>
-                                  </div>
-                          <blockquote>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-                        </blockquote>
-                      </div>
+                            <p><%= testimonial.body %></p>
+                          </blockquote> 
+                        </div>
+                      <% end %>  
                     </div>
                   </div>
                 </div>              
@@ -239,22 +199,22 @@
         <div class="row fontsize_small align_center fontwhite margintop">
           We look forward to hearing from you! Please fill out the form below and click "Submit." We will get back to you as soon as possible!
         </div>
-        <form>
+        <%= form_for @contact do |f| %>
           <div class="row margintop">
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <input type="text" placeholder="Full Name" class="form-control home_contact_form"/>
+              <%= f.text_field :name, placeholder: "Full Name",class: "form-control home_contact_form",required: true %>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
-              <input type="Email" placeholder="Email" class="form-control home_contact_form"/>
+              <%= f.text_field :email, placeholder: "Email",class: "form-control home_contact_form",required: true %>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12">
-              <textarea placeholder="Massege" class="form-control home_contact_form"></textarea>
+              <%= f.text_area :message, class: "form-control home_contact_form" %>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 align_center margintop">
-              <input type="button" value="Post" class="winter_btn backorange" />
+              <%= f.submit "Post", class: "winter_btn backorange" %>
             </div>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
     </section>

@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-6">
+      <h2>Workshops</h2>
+    </div>
+    <div class="col-md-6">
+      <div class="model_buttons">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="model_line"></div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Workshop Type</th>
+          <th>Location</th>
+          <th>Subject</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @careers.present? %>
+          <% @careers.each do |career| %>
+            <tr>
+              <td>
+                <%= career.name %>
+              </td>
+              <td>
+                <%= career.email %>
+              </td>
+              <td>
+                <%= career.mobile %>
+              </td>
+              <td>
+                <%= career.location %>
+              </td>
+              <td>
+                <%= career.subject %>
+              </td>
+              <td>
+                <%= link_to (fa_icon "eye").html_safe,admin_career_path(career.id),{title:'Show',class: 'btn-sm btn-primary'} %>
+                <%= link_to (fa_icon "trash").html_safe, admin_career_path(career),{title:'Delete',class: 'btn-sm btn-danger',method: :delete,data: {confirm: "Are you sure you want to delete this?"}} %>
+              </td>
+            </tr>
+          <% end %>
+        <% else %>
+          <tr>
+            <td class="center" colspan="6">No Record Found</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -15,5 +15,8 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require nano.js
+//= require contacts
+//= require student_enrollments
+//= require workshops
 //= require_tree .
 

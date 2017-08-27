@@ -18,13 +18,10 @@ class WorkshopsController < ApplicationController
 		session[:last_page] = school_workshop_path
 	end
 
-	def index
-		@workshops = Workshop.all
-	end
-
 	def create
 		@workshop = Workshop.new(workshop_params)
 		if @workshop.save
+			NotifyMailer.workshop_notify(@workshop).deliver_later
 			redirect_to session[:last_page]
 		else
 			render "#{session[:last_page]}"
