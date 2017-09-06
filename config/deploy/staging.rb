@@ -53,7 +53,7 @@ server "34.203.35.125",
   user: "ubuntu",
   roles: %w{web app db},
   ssh_options: {
-    keys: %w(/Users/nugen/Downloads/nugenInstanceKey.pem),
+    keys: %w(/home/nugen/Downloads/nugenInstanceKey.pem),
     forward_agent: false,
     auth_methods: %w(publickey)
     # password: "please use keys"

@@ -9,7 +9,7 @@ require "capistrano/deploy"
 # If you are using rbenv add these lines:
  require 'capistrano/rbenv'
  set :rbenv_type, :user
- set :rbenv_ruby
+ set :rbenv_ruby, '2.4.1'
 
 require 'capistrano/bundler'
 require 'capistrano/passenger'
