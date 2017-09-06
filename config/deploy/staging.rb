@@ -41,21 +41,20 @@
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+ # set :ssh_options, {
+ #   keys: %w(/Users/nugen/Downloads/nugenInstanceKey.pem),
+ #   forward_agent: false,
+ #   user: 'ubuntu'
+ # }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+server "34.203.35.125",
+  user: "ubuntu",
+  roles: %w{web app db},
+  ssh_options: {
+    keys: %w(/Users/nugen/Downloads/nugenInstanceKey.pem),
+    forward_agent: false,
+    auth_methods: %w(publickey)
+    # password: "please use keys"
+  }

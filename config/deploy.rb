@@ -5,7 +5,7 @@ lock "3.9.0"
 set :application, "dezignsuite"
 set :repo_url, "https://github.com/vanurox/dezignsuite.git"
 
-set :deploy_to, '/home/nitish/dezignsuite'
+set :deploy_to, '/home/ubuntu/dezignsuite'
 
 append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
@@ -19,7 +19,9 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
-
+set :ssh_options, {
+	config: false
+}
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
