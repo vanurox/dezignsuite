@@ -25,6 +25,11 @@
         </div>
       </div>
     <% else %>
+      <% flash.each do |key, value| %>
+          <div class="message">
+            <span><%= value %></span>
+          </div>
+      <% end %>
       <%= render "shared/header" %>
       <%= yield %>
       <%= render "shared/footer" %>

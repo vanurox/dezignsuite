@@ -12,8 +12,10 @@ class Admin::TestimonialsController < ApplicationController
 	def create
 		@testimonial = Testimonial.new(testimonial_params)
 		if @testimonial.save
+			flash[:success] = "Testimonial saved successfully"
 			redirect_to admin_testimonials_path
 		else
+			flash.now[:danger] = "Something wrong, try again"
 			render :new
 		end
 	end
@@ -23,14 +25,17 @@ class Admin::TestimonialsController < ApplicationController
 
 	def update
 		if @testimonial.update_attributes(testimonial_params)
+			flash[:success] = "Testimonial updated successfully"	
 			redirect_to admin_testimonials_path
 		else
+			flash.now[:danger] = "Something wrong, try again"
 			render :edit
 		end
 	end
 
 	def destroy
 		@testimonial.destroy
+		flash[:success] = "Testimonial deleted successfully"
 		redirect_to admin_testimonials_path
 	end
 

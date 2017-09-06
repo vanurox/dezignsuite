@@ -18,14 +18,6 @@
                     <%= image_tag slide.file, alt:"#{slide.file.file.filename}" %>
                   </div>
                 <% end %>
-
-                <!-- <div class="item">
-                  <%= image_tag asset_path("banner1.jpg"), alt:"Chicago" %>
-                </div>
-
-                <div class="item">
-                  <%= image_tag asset_path("banner1.jpg"), alt:"New York" %>
-                </div> -->
               </div>
 
               <!-- Left and right controls -->
@@ -51,71 +43,71 @@
       </div>
       <div class="container-fluid newsline">
         <div class="container">
-          <marquee> dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text dummy text</marquee>
+          <marquee>Get Industrial Training this winter with Dezignsuite - TCS Training partners - training from Professionals Developers</marquee>
         </div>
       </div>
       <!-- slider -->
 <section>
     <div class="container-fluid cards_con">
       <div class="container">
-        <div class="col-lg-4 col-md-4 col-sm-4 margintop">
+        <div class="col-lg-4 col-md-4 col-sm-6 margintop">
           <div class="cards_wrap">
             <div class="cards_head">
               Training & certification
             </div><br>
             <%= image_tag asset_path("card1.png") %><br><br>
-            <p class="fontsize_small fontblue">du mmy tex t du mmy te xt du mmy text dum my text du mmy text d ummy text dum my text du mmy text du mmy text</p>
-            <input type="button" value="Read More" class="winter_btn backblue" />
+            <p class="fontsize_small fontblue">Dezignsuite provides technical and non-technical trainings to various organizations such as: colleges, universities...</p><br>
+            <%= link_to "Training & Certification", training_and_certification_path, class: "winter_btn backblue" %>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 margintop">
+        <div class="col-lg-4 col-md-4 col-sm-6 margintop">
           <div class="cards_wrap">
             <div class="cards_head">
               Recruitment & Staffing
             </div><br>
             <%= image_tag asset_path("card2.png") %><br><br>
-            <p class="fontsize_small fontblue">du mmy tex t du mmy te xt du mmy text dum my text du mmy text d ummy text dum my text du mmy text du mmy text</p>
-            <input type="button" value="Read More" class="winter_btn backblue" />
+            <p class="fontsize_small fontblue">Organizations outsource recruitment and hiring practices for a lot of reasons. Some may lack the internal...</p><br>
+            <%= link_to "Recruitment & Staffing", recruitment_and_staffing_path, class: "winter_btn backblue" %>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 margintop">
+        <div class="col-lg-4 col-md-4 col-sm-6 margintop">
           <div class="cards_wrap">
             <div class="cards_head">
               Digital Marketing
             </div><br>
             <%= image_tag asset_path("card3.png") %><br><br>
-            <p class="fontsize_small fontblue">du mmy tex t du mmy te xt du mmy text dum my text du mmy text d ummy text dum my text du mmy text du mmy text</p>
-            <input type="button" value="Read More" class="winter_btn backblue" />
+            <p class="fontsize_small fontblue">The digital ecosystem has democratized advertising, marketing, media and content production. All over the...</p><br>
+            <%= link_to "Digital Marketing", digital_marketing_path, class: "winter_btn backblue" %>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 margintop">
+        <div class="col-lg-4 col-md-4 col-sm-6 margintop">
           <div class="cards_wrap">
             <div class="cards_head">
               Software Development & Testing
             </div><br>
             <%= image_tag asset_path("card1.png") %><br><br>
-            <p class="fontsize_small fontblue">du mmy tex t du mmy te xt du mmy text dum my text du mmy text d ummy text dum my text du mmy text du mmy text</p>
-            <input type="button" value="Read More" class="winter_btn backblue" />
+            <p class="fontsize_small fontblue">Dezignsuite having started its development centre in early 2014 has over the period achieved numerous success...</p><br>
+            <%= link_to "Software Development & Testing", software_development_and_testing_path, class: "winter_btn backblue" %>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 margintop">
+        <div class="col-lg-4 col-md-4 col-sm-6 margintop">
           <div class="cards_wrap">
             <div class="cards_head">
-              Software Solutions
+              Enterprise Mobility
             </div><br>
             <%= image_tag asset_path("card2.png") %><br><br>
-            <p class="fontsize_small fontblue">du mmy tex t du mmy te xt du mmy text dum my text du mmy text d ummy text dum my text du mmy text du mmy text</p>
-            <input type="button" value="Read More" class="winter_btn backblue" />
+            <p class="fontsize_small fontblue">Mobility gives you the advantage that your company's information and website can be accessed...</p><br>
+            <%= link_to "Enterprise Mobility", enterprise_mobility_path, class: "winter_btn backblue" %>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 margintop">
+        <div class="col-lg-4 col-md-4 col-sm-6 margintop">
           <div class="cards_wrap">
             <div class="cards_head">
-              Enterprise Mobility 
+              SEO
             </div><br>
             <%= image_tag asset_path("card3.png") %><br><br>
-            <p class="fontsize_small fontblue">du mmy tex t du mmy te xt du mmy text dum my text du mmy text d ummy text dum my text du mmy text du mmy text</p>
-            <input type="button" value="Read More" class="winter_btn backblue" />
+            <p class="fontsize_small fontblue">Search is usually the start of any online activity. When your prospects search the web for a particular product or service...</p><br>
+            <%= link_to "SEO", seo_path, class: "winter_btn backblue" %>
           </div>
         </div>
       </div>
@@ -141,7 +133,7 @@
             
             <!-- IMAGES -->
             <% @galleries.each do |gallery| %>
-              <a href="<%= gallery.file %>" data-ngthumb="<%= gallery.file %>">photo 1</a>
+              <a href="<%= gallery.file %>" data-ngthumb="<%= gallery.file %>"></a>
             <% end %>
           </div>
         </div>
@@ -208,7 +200,7 @@
               <%= f.text_field :email, placeholder: "Email",class: "form-control home_contact_form",required: true %>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12">
-              <%= f.text_area :message, class: "form-control home_contact_form" %>
+              <%= f.text_area :message,placeholder: "Message", class: "form-control home_contact_form" %>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 align_center margintop">
               <%= f.submit "Post", class: "winter_btn backorange" %>

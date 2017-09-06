@@ -15,4 +15,9 @@ class NotifyMailer < ActionMailer::Base
 		@data = data
 		mail(from: data.name, subject: "Career- Message from #{data.email}")
 	end
+
+	def program_notify(data)
+		@data = data
+		mail(from: data.name, subject: "Program- Message from #{data.email}")
+	end
 end

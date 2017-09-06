@@ -12,8 +12,10 @@ class Admin::GalleriesController < ApplicationController
 	def create
 		@gallery = Gallery.new(gallery_params)
 		if @gallery.save
+			flash[:success] = "Record saved successfully"
 			redirect_to admin_galleries_path
 		else
+			flash.now[:danger] = "Something wrong, try again"
 			render :new
 		end
 	end
@@ -23,24 +25,29 @@ class Admin::GalleriesController < ApplicationController
 
 	def update
 		if @gallery.update_attributes(gallery_params)
+			flash[:success] = "Record saved successfully"
 			redirect_to admin_galleries_path
 		else
+			flash.now[:danger] = "Something wrong, try again"
 			render :edit
 		end
 	end
 
 	def publish
 		@gallery.update_attributes(status: true)
+		flash[:success] = "Record published successfully"
 		redirect_to admin_galleries_path
 	end
 
 	def unpublish
 		@gallery.update_attributes(status: false)
+		flash[:success] = "Record unpublished successfully"
 		redirect_to admin_galleries_path
 	end
 
 	def destroy
 		@gallery.destroy
+		flash[:success] = "Record deleted successfully"
 		redirect_to admin_galleries_path
 	end
 

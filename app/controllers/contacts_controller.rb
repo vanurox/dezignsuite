@@ -8,6 +8,7 @@ class ContactsController < ApplicationController
 		@contact = Contact.new(contact_params)
 		if @contact.save
 			NotifyMailer.notify(@contact).deliver_later
+			flash[:success] = "Your form is submitted successfully. We will contact you soon."
 			redirect_to contact_path
 		else
 			render :contact

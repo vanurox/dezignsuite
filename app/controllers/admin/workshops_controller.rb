@@ -11,6 +11,7 @@ class Admin::WorkshopsController < ApplicationController
 	def destroy
 		@workshop = Workshop.find(params[:id])
 		@workshop.destroy
+		flash[:success] = "Workshop deleted successfully"
 		redirect_to admin_workshops_path
 	end
 end

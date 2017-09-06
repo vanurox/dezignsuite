@@ -1,0 +1,39 @@
+<%= form_for @program, html: {novalidate: true} do |f| %>
+  <div class="form-group">
+    <label for="program_name">Name*</label>
+    <%= f.text_field :name, class: "form-control", placeholder:"Name" %>
+  </div>
+  <div class="form-group">
+    <label for="program_email">Email*</label>
+    <%= f.text_field :email, class: "form-control", placeholder:"Email" %>
+  </div>
+  <div class="form-group">
+    <label for="program_mobile">Mobile*</label>
+    <%= f.text_field :mobile, class: "form-control", placeholder:"Mobile" %>
+  </div>
+  <div class="form-group">
+    <label for="program_programtype">Program Type</label>
+    <%= f.select :program_type, options_for_select([["In House Training Program",'In House Training Program'],["Job-oriented Training Program","Job-oriented Training Program"],['Corporate Training Program','Corporate Training Program']]),{prompt: "Choose your program"},class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="program_location">Location</label>
+    <%= f.select :location, options_for_select([["Mohali",'Mohali']]),{prompt: "Choose your location"},class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="program_state">State*</label>
+    <%= f.text_field :state,placeholder: "Your state", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="program_city">City*</label>
+    <%= f.text_field :city, placeholder: "Your city", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="program_subject">Subject*</label>
+    <%= f.text_field :subject,placeholder: "Subject", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="program_message">Message*</label>
+    <%= f.text_area :message, class: "form-control" %>
+  </div>
+  <%= f.submit "Submit", class: "winter_btn backorange" %>  
+  <% end %>

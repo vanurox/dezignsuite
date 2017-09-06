@@ -1,3 +1,16 @@
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/59a4604f4fe3a1168eada1f2/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
 <header id="header_con">
     <!-- header top -->
       <div class="container-fluid header_con">
@@ -7,8 +20,8 @@
               <%= image_tag asset_path("toplogo.png"), class:"top_logo" %>
             </div>
             <div class="col-lg-7 col-md-7 col-sm-7 header_right align_right paddingtop">
-              <span class="bold_text fontsize_small"><i class="fa fa-mobile fontorange"></i></span> <span class="fontblue fontsize_small">+91-9646498343</span> <span class="bold_text fontsize_small"><i class="fa fa-envelope fontorange"></i></span> <span class="fontblue fontsize_small">nitish.ranag@gmail.com<span class="fontblue"> <br>
-              <a href=""><i class="fa fa-facebook marginright"></i></a> <a href=""><i class="fa fa-google-plus marginright"></i></a> <a href=""><i class="fa fa-instagram marginright"></i></a> <a href=""><i class="fa fa-linkedin marginright"></i></a> <input type="button" value="Winter Training" class="winter_btn backorange" />
+              <span class="bold_text fontsize_small"><i class="fa fa-mobile fontorange"></i></span> <span class="fontblue fontsize_small">+91-7307004462</span> <span class="bold_text fontsize_small"><i class="fa fa-envelope fontorange"></i></span> <span class="fontblue fontsize_small">Dezignsuitemohali@gmail.com<span class="fontblue"> <br>
+              <a href="https://www.facebook.com/dezignsuiteinc"><i class="fa fa-facebook marginright"></i></a> <a href="https://plus.google.com/106564327958626591899/about"><i class="fa fa-google-plus marginright"></i></a> <a href="https://www.instagram.com/dezignsuiteinc/"><i class="fa fa-instagram marginright"></i></a> <a href="https://www.linkedin.com/in/dezignsuiteinc"><i class="fa fa-linkedin marginright"></i></a> <button class="winter_btn backorange headerwinter_btn" style="color:#fff;"><%= link_to "Winter Training",courses_path %></button>
             </div>
           </div>
           <div class="row">
@@ -30,7 +43,7 @@
                     <li><%= link_to "HOME",root_path %></li>
                     <li><%= link_to "ABOUT US", about_us_path %></li>
                     <li class="dropdown">
-                      <%= link_to "WORKSHOP<span class='caret'></span>".html_safe,workshop_path, {"data-toggle": "dropdown",role: "button", "aria-haspopup": "true", "aria-expanded": "false", class: "dropdown-toggle"} %>
+                      <%= link_to "WORKSHOP<span class='caret'></span>".html_safe,workshop_path, {class: "dropdown-toggle"} %>
                       <ul class="dropdown-menu">
                         <li><%= link_to "College/University Workshops",college_workshop_path %></li>
                         <li><%= link_to "School Workshops", school_workshop_path%></li>
@@ -38,43 +51,50 @@
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROGRAM <span class="caret"></span></a>
+                      <%= link_to "PROGRAM<span class='caret'></span>".html_safe,program_path, {class: "dropdown-toggle"} %>
                       <ul class="dropdown-menu">
-                        <li><a href="#">In House Program</a></li>
-                        <li><a href="#">Corporate Program</a></li>
-                        <li><a href="#">Job Oriented Program</a></li>
+                        <li><%= link_to "In House Training Program",inhouse_training_program_path %></li>
+                        <li><%= link_to "Job Oriented Training Program", joboriented_training_program_path%></li>
+                        <li><%= link_to "Corporate Training Program", corporate_training_program_path%></li>
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICES <span class="caret"></span></a>
+                      <%= link_to "SERVICES<span class='caret'></span>".html_safe,services_path, {class: "dropdown-toggle"} %>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Software Development & Testing</a></li>
-                        <li><a href="#">Enterprise Mobility</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Training & Certification</a></li>
-                        <li><a href="#">Recruitment & Staffing</a></li>
-                        <li><a href="#">Online Reputation Management</a></li>
-                        <li><a href="#">SEO</a></li>
-                        <li><a href="#">Social Media Optimization</a></li>
-                        <li><a href="#">Pay Per Click</a></li>
+                        <li><%= link_to "Software Development & Testing", software_development_and_testing_path %></li>
+                        <li><%= link_to "Enterprise Mobility", enterprise_mobility_path %></li>
+                        <li><%= link_to "Digital Marketing", digital_marketing_path %></li>
+                        <li><%= link_to "Training & Certification", training_and_certification_path %></li>
+                        <li><%= link_to "Recruitment & Staffing", recruitment_and_staffing_path %></li>
+                        <li><%= link_to "Online Reputation Management", online_reputation_management_path %></li>
+                        <li><%= link_to "SEO", seo_path %></li>
+                        <li><%= link_to "Social Media Optimization", smo_path %></li>
+                        <li><%= link_to "Pay Per Click", pay_per_click_path %></li>
                       </ul>
                     </li>
                     <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COURSES <span class="caret"></span></a>
+                      <%= link_to "COURSES<span class='caret'></span>".html_safe,courses_path,{class: "dropdown-toggle"} %>
                       <ul class="dropdown-menu">
-                        <li><a href="#">PHP MYSQL</a></li>
-                        <li><a href="#">ASP.Net</a></li>
-                        <li><a href="#">SEO</a></li>
-                        <li><a href="#">Android Apps Development</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Cloud Computing</a></li>
-                        <li><a href="#">Big Data and Hadoop</a></li>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Web Designing</a></li>
+                        <li><%= link_to "PHP MYSQL", php_course_path %></li>
+                        <li><%= link_to "ASP.Net", dotnet_course_path %></li>
+                        <li><%= link_to "Android Apps Development", android_course_path %></li>
+                        <li><%= link_to "Digital Marketing", digital_marketing_course_path %></li>
+                        <li><%= link_to "Cloud Computing", cloud_computing_course_path %></li>
+                        <li><%= link_to "Big Data and Hadoop", bigdata_course_path %></li>
+                        <li><%= link_to "Java", java_course_path %></li>
+                        <li><%= link_to "Web Designing", web_designing_course_path %></li>
+                        <li><%= link_to "Python", python_course_path %></li>
+                        <li><%= link_to "Tally", tally_course_path %></li>
+                        <li><%= link_to "Software Testing", software_testing_course_path %></li>
+                        <li><%= link_to "Networking", networking_course_path %></li>
+                        <li><%= link_to "Embedded System", embedded_system_course_path %></li>
+                        <li><%= link_to "C Language", c_course_path %></li>
+                        <li><%= link_to "C++", cplus_course_path %></li>
+                        <li><%= link_to "Business Analyst", business_analyst_course_path %></li>
                       </ul>
                     </li>
                     <li><%= link_to "CAREER",career_path %></li>
-                    <li><a href="#">PLACEMENT</a></li>
+                    <li><%= link_to "PLACEMENT","#" %></li>
                     <li><%= link_to "BLOG",blog_path %></li>
                     <li><%= link_to "CONTACT",contact_path %></li>
                     <li><%= link_to "ONLINE ENROLLMENT",new_student_enrollment_path %></li>

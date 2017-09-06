@@ -20,3 +20,20 @@
 //= require workshops
 //= require_tree .
 
+$(document).on('turbolinks:load',function(){
+$(".footer_up_btn").click(function(){
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+setTimeout(function(){
+	$(".message").fadeOut("slow");
+},3000);
+});
+$(window).scroll(function(){
+      if ($(window).scrollTop() >= 100) {
+         $('.header_con').addClass('fixed-header');
+      }
+      else {
+         $('.header_con').removeClass('fixed-header');
+      }
+  });

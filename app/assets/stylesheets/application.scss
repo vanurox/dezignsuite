@@ -26,6 +26,24 @@
 @import 'responsive.scss';
 
 /* common style*/
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+.message{
+	position:fixed;
+	width:100%;
+	height:auto;
+	padding:20px 10px;
+	text-align:center;
+	font-size:18px;
+	font-weight:700;
+	z-index:100000000;
+	color:#fff;
+	background:#ef5a13;
+}
+header{
+	border-bottom:solid 4px #0047a3;
+}
 a:hover{
 	text-decoration: none;
 }
@@ -84,9 +102,13 @@ a:hover{
 }
 .backblue{
 	background: #0047a3;
+	padding:10px;
+	color:#fff;
 }
 .backorange{
 	background:#ef5a13;
+	padding:10px;
+	color:#fff;
 }
 .fontwhite{
 	color: #fff;
@@ -108,11 +130,12 @@ a:hover{
 	height: 40px;
 	width: 140px;
 	border: none;
-	color: #fff;
+	color: #fff !important;
 	transition:.3s ease-in-out;
 }
 .winter_btn:hover{
 	background: #0047a3;
+	color:#fff;
 }
 .fixed-header {
   position: fixed;
@@ -120,4 +143,7 @@ a:hover{
   width: 100%; 
   z-index: 1000;
   background: #fff;
+}
+.marginauto{
+	margin:auto;
 }

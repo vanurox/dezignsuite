@@ -12,6 +12,7 @@ class Admin::CareersController < ApplicationController
 	def destroy
 		@career = Career.find(params[:id])
 		@career.destroy
+		flash[:success] = "Career deleted successfully"
 		redirect_to admin_careers_path
 	end
 

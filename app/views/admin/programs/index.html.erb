@@ -1,0 +1,61 @@
+<%= render "admin/shared/message" %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-6">
+      <h2>Programs</h2>
+    </div>
+    <div class="col-md-6">
+      <div class="model_buttons">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="model_line"></div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Program Type</th>
+          <th>Location</th>
+          <th>Subject</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @programs.present? %>
+          <% @programs.each do |program| %>
+            <tr>
+              <td>
+                <%= program.name %>
+              </td>
+              <td>
+                <%= program.email %>
+              </td>
+              <td>
+                <%= program.program_type %>
+              </td>
+              <td>
+                <%= program.location %>
+              </td>
+              <td>
+                <%= program.subject %>
+              </td>
+              <td>
+                <%= link_to (fa_icon "eye").html_safe,admin_program_path(program.id),{title:'Show',class: 'btn-sm btn-primary'} %>
+                <%= link_to (fa_icon "trash").html_safe, admin_program_path(program),{title:'Delete',class: 'btn-sm btn-danger',method: :delete,data: {confirm: "Are you sure you want to delete this?"}} %>
+              </td>
+            </tr>
+          <% end %>
+        <% else %>
+          <tr>
+            <td class="center" colspan="6">No Record Found</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

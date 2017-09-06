@@ -11,6 +11,7 @@ class Admin::ContactsController < ApplicationController
 	def destroy
 		@contact = Contact.find(params[:id])
 		@contact.destroy
+		flash[:success] = "Contact deleted successfully"
 		redirect_to admin_contacts_path
 	end
 end

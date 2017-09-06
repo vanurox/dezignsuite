@@ -7,7 +7,8 @@ class CareersController < ApplicationController
 	def create
 		@career = Career.new(career_params)
 		if @career.save
-			NotifyMailer.career_notify(@career).deliver_later
+			NotifyMailer.career_notify(@career).deliver_now
+			flash[:success] = "Your form is submitted successfully. We will contact you soon."
 			redirect_to career_path
 		else
 			render :career

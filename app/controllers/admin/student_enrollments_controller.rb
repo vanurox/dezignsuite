@@ -12,6 +12,7 @@ class Admin::StudentEnrollmentsController < ApplicationController
 	def destroy
 		@student  = StudentEnrollment.find(params[:id])
 		@student.destroy
+		flash[:success] = "Record deleted successfully"
 		redirect_to admin_student_enrollments_path
 	end
 end
